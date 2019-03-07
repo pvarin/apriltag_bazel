@@ -1,8 +1,8 @@
 # apriltag_bazel
 A bazel consumable repository for apriltags.
 
-## Usage
-Install OpenCV
+## Installing dependencies.
+The only dependency to install is OpenCV.
 ```
 sudo apt install libopencv-dev
 ```
