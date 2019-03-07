@@ -2,7 +2,7 @@
 A bazel consumable repository for apriltags.
 
 ## Usage
-Install `opencv`
+Install OpenCV
 ```
 sudo apt install libopencv-dev
 ```
