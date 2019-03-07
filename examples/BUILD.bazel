@@ -1,0 +1,22 @@
+cc_binary(
+    name='apriltag_demo',
+    srcs=['apriltag_demo.c'],
+    deps=['@apriltags'],
+    linkopts=[
+        "-lpthread",
+        "-lm",
+    ],
+)
+
+cc_binary(
+    name='opencv_demo',
+    srcs=['opencv_demo.cc'],
+    deps=[
+        '@apriltags',
+        '@opencv',
+    ],
+    linkopts=[
+        "-lpthread",
+        "-lm"
+    ],
+)

@@ -11,5 +11,5 @@ cc_import(
     hdrs = glob(["*.h", "common/*.h"]),
     static_library = "libapriltag.a",
     shared_library = "libapriltag.so",
-    visibility = ["//visibility:public"],
+    visibility = ["//visibility:public"]
 )
