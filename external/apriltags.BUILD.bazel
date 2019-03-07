@@ -1,0 +1,15 @@
+genrule(
+    name = "apriltags_genrule",
+    srcs = glob(["**"], exclude=["*.a", "*.so"]),
+    outs = ["libapriltag.a", "libapriltag.so"],
+    cmd = "make all -C external/apriltags; echo $(GENDIR); cp external/apriltags/libapriltag.a $(@D); cp external/apriltags/libapriltag.so $(@D)",
+    message= "building the apriltags library"
+)
+
+cc_import(
+    name = "apriltags",
+    hdrs = glob(["*.h", "common/*.h"]),
+    static_library = "libapriltag.a",
+    shared_library = "libapriltag.so",
+    visibility = ["//visibility:public"],
+)
